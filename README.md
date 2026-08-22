@@ -3,12 +3,15 @@ Este documento se propõe a ser uma curadoria não exaustiva de informações so
 
 ## O que é a placa AsRock Bc-250
 
-A AMD BC250 é um hardware compacto construído em torno da APU 'Cyan Skillfish' da AMD, mesma usada no console Playstation 5 da Sony, originalmente projetado para mineração de criptomoedas.  
+A AMD BC250 é um hardware compacto construído em torno da APU 'Cyan Skillfish' da AMD que é mesma usada no console Playstation 5 da Sony, originalmente esse hardware foi projetado para ser usado em rigs de mineração de criptomoedas.  
   
 ![Rig-01.webp](media/Rig-01.webp)  
   
 ![Rig-02.webp](media/Rig-02.webp)    
-A comunidade transformou esse hardware em um sistema desktop e de jogos em Linux bastante capaz e, mais recentemente, em um servidor doméstico de IA de baixo custo.  
+  
+![AsRock-BC250-01.webp](media/AsRock-BC250-01.webp)    
+  
+A função inicial deixou de ser interessante e essas placas começaram a ser vendidas e logo a comunidade a descobriu e transformou esse hardware em um sistema desktop e de jogos em Linux bastante capaz e, mais recentemente, em um servidor doméstico de IA de baixo custo.  
 
   
 ## Características da instalação
