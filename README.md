@@ -1,9 +1,11 @@
 ## Sobre
-Este documento se propõe a ser uma curadoria não exaustiva de informações sobre a placa AsRock BC-250 e a gama infinita de possibilidades que ela trás.
+Este documento se propõe a ser uma curadoria não exaustiva de informações sobre a placa AsRock BC-250 e a gama infinita de possibilidades que a acompanham.
 
-## O que é a placa AsRock Bc-250
+## O que é a placa AsRock BC-250
 
-A AMD BC250 é um hardware compacto construído em torno da APU 'Cyan Skillfish' da AMD que é mesma usada no console Playstation 5 da Sony, originalmente esse hardware foi projetado para ser usado em rigs de mineração de criptomoedas.  
+A AMD BC250 é um hardware compacto construído em torno da APU 'Cyan Skillfish' da AMD que é, diz a lenda, a mesma usada no console Playstation 5 da Sony com algumas funções restringidas.  
+  
+Originalmente esse hardware foi projetado para ser usado em rigs de mineração de criptomoedas.  
   
 ![Rig-01.webp](media/Rig-01.webp)  
   
@@ -11,8 +13,35 @@ A AMD BC250 é um hardware compacto construído em torno da APU 'Cyan Skillfish'
   
 ![AsRock-BC250-01.webp](media/AsRock-BC250-01.webp)    
   
-A função inicial deixou de ser interessante e essas placas começaram a ser vendidas e logo a comunidade a descobriu e transformou esse hardware em um sistema desktop e de jogos em Linux bastante capaz e, mais recentemente, em um servidor doméstico de IA de baixo custo.  
+A função inicial deixou de ser interessante e os rigs foram desmontados essas placas começaram a ser vendidas como "e-waste".  
+  
+Logo a comunidade a descobriu e transformou esse hardware em um sistema desktop e de jogos em Linux bastante capaz e, mais recentemente, em um servidor doméstico de IA de baixo custo.  
 
+## Características básicas do Hardware  
+  
+Como mencionado anteriormente, a AsRock BC-250 vem de fábrica com algumas funcionalidades restritas, isso se deve ao fato de ela ter sido projetada exclusivamente para a mineração de criptomoedas e construída a partir de chips que foram rejeitados pela linha de produção principal.  
+  
+Dito isso, segue uma tabela com as configurações de fábrica e o que talvez seja possível atingir (Loteria do silício).
+  
+| Característica | Default | Possibilidade |
+|  :--- |  :---: |  :---: |
+| CPU | 6c/12t | 8c/16t |
+| CPU Clock | 3500 MHz | 4000 MHZ |
+| GPU | 28 CUs | 40 CUs |
+| GPU Clock | 1500 MHz | 2230 MHz |
+| Memória  | *16GB GDDR6 | N/A |
+| Saída de Video  | 1x DisplayPort | N/A |
+| Rede  | 1x GbE Ethernet | N/A |
+| Armazenamento  | 1x stlot M.2 NVMe/SATA (gen2) | N/A |
+| USB  | 2x USB 3.0, 2x USB 2.0 | N/A |
+  
+*A memória é compartilhada entre CPU e GPU  
+
+
+
+
+
+## O que é a placa AsRock BC-250
   
 ## Características da instalação
 Como resultado final da instalação teremos um Arch Linux com as seguintes características:  
