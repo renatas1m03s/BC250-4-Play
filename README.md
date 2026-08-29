@@ -13,9 +13,12 @@ Originalmente esse hardware foi projetado para ser usado em rigs de mineração 
   
 ![AsRock-BC250-01.webp](media/AsRock-BC250-01.webp)    
   
-A função inicial deixou de ser interessante e os rigs foram desmontados essas placas começaram a ser vendidas como "e-waste".  
+A função inicial deixou de ser interessante e foi quando os rigs foram desmontados e essas placas começaram a ser vendidas como "e-waste".  
+Sorte da comunidade 😀😀
   
-Logo a comunidade a descobriu e transformou esse hardware em um sistema desktop e de jogos em Linux bastante capaz e, mais recentemente, em um servidor doméstico de IA de baixo custo.  
+Logo a turma a descobriu novas possibilidades de uso, como capacidade para gaming, desktop com excelente custo benefício e em alguns cenários de IA.  
+
+**OBS.: Até o momento não existem drivers de aceleração gráfica para o windows.**
 
 ## Características básicas do Hardware  
   
@@ -45,17 +48,21 @@ Uma vez que já fomos apresentados a BC-250 vamos a uma lista básica do mínimo
 - Uma fonte ATX com um conector PCIe que consiga sustentar no mínimo 300W na linha de 12v.  
 - Cabo DisplayPort para uso com um monitor com essa conexão, ou adaptador DisplayPort para HDMI para uso com monitor HDMI ou TV.  
 - Armazenamento (algumas possibilidades):   
-  - Preferencialmente uma memória M.2 NVMe com capacidade para sistema operacional, aplicativos e jogos;  
+  - Preferencialmente uma memória M.2 NVMe com capacidade para sistema operacional, aplicativos e jogos, lembrando que o slot é M.2 gen 2, por isso, não precisa investir em midias rápidas como gen3, gen4 ou mesmo gen5.    
   - Algum tipo de armazenamento USB (disco externo)  
   - Adaptador conversor de M.2 para SATA (chip testado pela comunidade ASM1166)  
 - Um apatador USB Wifi/Bluetooth se você não for usar rede ethernet e se precisar de conexão bluetooth.
 - Duas FANs de 120mm, uma para o dissipador principal e outra para o backplate das memórias
 - Paciência e curiosidade  
   
+> [!TIP]  
+> Ao final existem algumas dicas para o além do básico, como PTM 7950, thermalpads, cases e dissipador para o backplate.  
+  
 ## Cuidados com as compras
 
 ### Como saber se a fonte é suficiente  
 A alimentação principal da BC-250 acontece via um conector PCIe de 8 pinos, presente na maior parte das fontes ATX e são comumente usados para alimentar placas de video, além do PCIe a alimentação pode ser complementada ou substituída por uma alimentação através de dois plugues do tipo microfit que ficam ao lado, ressaltando que eles tem uma pinagem específica e não padrão.  
+  
 <img src="media/alimentacao.webp" width="450" alt="alimentacao.webp">    
   
 Ainda não existe um consenso sobre a importância do uso dos conectores microfit, embora seja difícil refutar o argumento de "quanto mais melhor", a prática não evidencia ganhos em uso padrão, mesmo em situações de overclock.  
@@ -76,18 +83,28 @@ Lembrando que estamos discutindo o mínimo para se iniciar com a BC-250, mas se 
 Existe um momento canônico muito comum entre os proprietários da BC-250 que é a primeira vez que a placa é ligada e que apesar dos leds acenderem ela não dá video, usando uma amostra puramente anedótica, vemos que a maior parte desses casos é resultado da combinação adaptador/cabo versus monitor/tv, pois a BC-250 é muito "seletiva" e não funciona em qualquer cenário. No meu caso eu uso um adaptador da ugreen que funciona com a minha TV, mas não funciona no meu monitor principal, quando eu quero usar esse monitor, uso um cabo DisplayPort puro, outra situação é quando eu quero conectar a BC-250 no meu monitor portátil da Arzopa e uso um cabo DisplayPort para USB-C.
 Seguem as especificações do que é sugerido pela comunidade:  
 
-- [Adaptador BENFEI DP para HDMI](https://shopee.com.br/product/1590082224/58250184593?gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QACpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMaaRlZwa4TmRr35EbRKe45opqqWzquDpxLoPl6a_nP90XlrFndAmj-Eti4LViLnnfxaArnW_92wfHWioVqmNpcGhlcnRleHTEdAAAAAzEdJYIlMyBP-5Pmi-aI8ubtR5HcX38fiWtkN0vaYOYLnESM_VBDtr98r5gwfpsE0-hbf1YQ-V5bGKEQXbvn23nlJ3ZLJr6ijfx9nnHC_vCDwWsV0kh57eImjsIBCgDTFR4ADieeHLvphDhEpgdM8jM&gad_source=1&gad_campaignid=20824904870&gclid=Cj0KCQjwhsrUBhDxARIsAN3AQSeJlDutKoEcqnicEc_ep5yhbQ81NhSkNAjzG2RkGktTB0pcOz1_ISEaAosYEALw_wcB)  
+[Adaptador BENFEI DP para HDMI](https://shopee.com.br/product/1590082224/58250184593?gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QACpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMaaRlZwa4TmRr35EbRKe45opqqWzquDpxLoPl6a_nP90XlrFndAmj-Eti4LViLnnfxaArnW_92wfHWioVqmNpcGhlcnRleHTEdAAAAAzEdJYIlMyBP-5Pmi-aI8ubtR5HcX38fiWtkN0vaYOYLnESM_VBDtr98r5gwfpsE0-hbf1YQ-V5bGKEQXbvn23nlJ3ZLJr6ijfx9nnHC_vCDwWsV0kh57eImjsIBCgDTFR4ADieeHLvphDhEpgdM8jM&gad_source=1&gad_campaignid=20824904870&gclid=Cj0KCQjwhsrUBhDxARIsAN3AQSeJlDutKoEcqnicEc_ep5yhbQ81NhSkNAjzG2RkGktTB0pcOz1_ISEaAosYEALw_wcB)  
 <img src="media/BENFEI-DP2HDMI.webp" width="300" alt="Adaptador BENFEI">   
-- [BENFEI — Cabo USB C para DisplayPort 1.4 bidirecional](https://www.amazon.com.br/dp/B0DNSNGDSB?ref=ppx_yo2ov_dt_b_fed_asin_title)  
+[BENFEI — Cabo USB C para DisplayPort 1.4 bidirecional](https://www.amazon.com.br/dp/B0DNSNGDSB?ref=ppx_yo2ov_dt_b_fed_asin_title)  
 <img src="media/BENFEI-DP2USB-C.webp" width="300" alt="BENFEI — Cabo USB C para DisplayPort 1.4 bidirecional"> 
     
 ### Adaptador USB para WIFI/Bluetooth
 Nesse caso a "incompatibilidade" se dá por conta de alguns chipsets que não são compatíveis com linux, além disso, existe o comportamento de alguns fabricantes/lojas que entregam o mesmo "modelo" de dispositivo com chipsets diferentes, por isso a melhor forma é procurar no anúncio se é compatível com linux, sendo que a forma mais garantida é procurar no anúncio o modelo do chipset e pesquisar no google a compatibilidade com linux.  
 
-Ex. [Adaptador USB Sem Fio Wifi/Bluetooth 600Mbps](https://s.click.aliexpress.com/e/_mOyWwIX) se seguirmos o link e olharmos a especificação teremos o chipset **RTL8812** e se jogarmos no google **linux RTL8812 kernel 7** a resposta virá dizendo que o driver para o adaptador RTL8812 é nativamente suportado no kernel 7.X - Em distros que usem kernels mais antigos pode ser necessário instalar o driver DKMS específico.
+Ex. [Adaptador USB Sem Fio Wifi/Bluetooth 600Mbps](https://s.click.aliexpress.com/e/_mOyWwIX) se seguirmos o link e olharmos a especificação teremos o chipset **RTL8812** e se jogarmos no google **linux RTL8812 kernel 7** a resposta virá dizendo que o driver para o adaptador RTL8812 é nativamente suportado no kernel 7.X. Obs.: Em distros que usem kernels mais antigos pode ser necessário instalar o driver DKMS específico.
 
-### FAN 120mm
+### FANs/Ventoinhas  
+Novamente, reforçando, esse guia é o mínimo necessário para começar, existem alternativas mais avançadas e caras que não serão descritas aqui, como por exemplo o uso de Water Cooler.  
   
+O consenso da comunidade é que uma FAN 120mm Arctic Cooler 12P Pro no dissipador original (com as aletas abertas) e um atrás no backplate é suficiente para a maioria dos casos, mesmo em situações de overclock.  
+  
+Caso esse modelo esteja em falta as especificações que devem ser buscadas na alternativa, são:  
+  
+- Conector PWM (Consegue associar o RPM com a temperatura dos componentes)   
+- RPM. O Arctic Cooler atinge 3000 RPMs máximos.  
+- Pressão estática. Para referência, o Arctic Cooler tem uma pressão estática de 6.9 mmH2O, que no caso de uma BC-250 com as aletas abertas é a pressão que ele consegue jogar o ar para dentro do dissipador.  
+- Nível de ruído (Opcional)
+
 ## Características da instalação
 Como resultado final da instalação teremos um Arch Linux com as seguintes características:  
   
