@@ -34,14 +34,14 @@ Dito isso, segue uma tabela com as configurações de fábrica e o que talvez se
 | Rede  | 1x GbE Ethernet | N/A |
 | Armazenamento  | 1x stlot M.2 NVMe/SATA (gen2) | N/A |
 | USB  | 2x USB 3.0, 2x USB 2.0 | N/A |
+| USB  | 2x USB 3.0, 2x USB 2.0 | N/A |
   
 *A memória é compartilhada entre CPU e GPU  
-
-
-
-
-
-## O que é a placa AsRock BC-250
+  
+## O básico para começar  
+Uma vez que já fomos apresentados a BC-250 vamos a uma lista básica do mínimo necessário para começar a se divertir:  
+  
+- Uma placa AsRock BC-250 🙄
   
 ## Características da instalação
 Como resultado final da instalação teremos um Arch Linux com as seguintes características:  
