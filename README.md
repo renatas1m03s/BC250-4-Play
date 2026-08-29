@@ -25,7 +25,7 @@ Dito isso, segue uma tabela com as configurações de fábrica e o que talvez se
   
 | Característica | Default | Possibilidade |
 |  :--- |  :---: |  :---: |
-| CPU | 6c/12t | 8c/16t |
+| CPU | 6C/12T | 8C/16T |
 | CPU Clock | 3500 MHz | 4000 MHZ |
 | GPU | 28 CUs | 40 CUs |
 | GPU Clock | 1500 MHz | 2230 MHz |
@@ -42,6 +42,51 @@ Dito isso, segue uma tabela com as configurações de fábrica e o que talvez se
 Uma vez que já fomos apresentados a BC-250 vamos a uma lista básica do mínimo necessário para começar a se divertir:  
   
 - Uma placa AsRock BC-250 🙄
+- Uma fonte ATX com um conector PCIe que consiga sustentar no mínimo 300W na linha de 12v.  
+- Cabo DisplayPort para uso com um monitor com essa conexão, ou adaptador DisplayPort para HDMI para uso com monitor HDMI ou TV.  
+- Armazenamento (algumas possibilidades):   
+  - Preferencialmente uma memória M.2 NVMe com capacidade para sistema operacional, aplicativos e jogos;  
+  - Algum tipo de armazenamento USB (disco externo)  
+  - Adaptador conversor de M.2 para SATA (chip testado pela comunidade ASM1166)  
+- Um apatador USB Wifi/Bluetooth se você não for usar rede ethernet e se precisar de conexão bluetooth.
+- Duas FANs de 120mm, uma para o dissipador principal e outra para o backplate das memórias
+- Paciência e curiosidade  
+  
+## Cuidados com as compras
+
+### Como saber se a fonte é suficiente  
+A alimentação principal da BC-250 acontece via um conector PCIe de 8 pinos, presente na maior parte das fontes ATX e são comumente usados para alimentar placas de video, além do PCIe a alimentação pode ser complementada ou substituída por uma alimentação através de dois plugues do tipo microfit que ficam ao lado, ressaltando que eles tem uma pinagem específica e não padrão.  
+<img src="media/alimentacao.webp" width="450" alt="alimentacao.webp">    
+  
+Ainda não existe um consenso sobre a importância do uso dos conectores microfit, embora seja difícil refutar o argumento de "quanto mais melhor", a prática não evidencia ganhos em uso padrão, mesmo em situações de overclock.  
+  
+A documentação sugere no mínimo que a linha de 12V da fonte a ser usada entregue 300W, para saber isso, basta olhar a especificação da fonte e verificar a corrente que o 12V consegue entregar.  
+  
+Ex. Uma fonte relativamente popular é a MSI MAG A500DN, fonte de 500W, em um primeiro momento podemos nos enganar olhando para "número" da fonte, 500W é mais que suficiente, não é?  
+  
+Esse pensamento é enganoso, pois examinando a especificação da linha de 12V veremos que o máximo de corrente entregue é de 21A e o cálculo da potência é **P = V × I (Potência (P) = Voltagem (V) x Corrente (I))** nessa caso em questão temos "somente" uma entrega de **252W**, isso em momentos de pico, portanto essa fonte de 500W não seria o recomendado.  
+  
+> [!TIP]  
+> Formula para saber a potência P = V × I (Potência (P) = Voltagem (V) x Corrente (I))
+  
+Lembrando que estamos discutindo o mínimo para se iniciar com a BC-250, mas se a ideia é criar um setup compacto, usando cases personalizados e pequenos, sempre teremos as fontes flex, como por exemplo as fontes flex modulares da metalfish.  
+*Obs.: Até um passado bem recente as fontes metalfish de 600W tinha uma imcompatibilidade com a BC-250, mas isso foi resolvido recentemente, como fica explícito na página deles no aliexpress.  
+  
+### Adaptador/Cabo DisplayPort para HDMI
+Existe um momento canônico muito comum entre os proprietários da BC-250 que é a primeira vez que a placa é ligada e que apesar dos leds acenderem ela não dá video, usando uma amostra puramente anedótica, vemos que a maior parte desses casos é resultado da combinação adaptador/cabo versus monitor/tv, pois a BC-250 é muito "seletiva" e não funciona em qualquer cenário. No meu caso eu uso um adaptador da ugreen que funciona com a minha TV, mas não funciona no meu monitor principal, quando eu quero usar esse monitor, uso um cabo DisplayPort puro, outra situação é quando eu quero conectar a BC-250 no meu monitor portátil da Arzopa e uso um cabo DisplayPort para USB-C.
+Seguem as especificações do que é sugerido pela comunidade:  
+
+- [Adaptador BENFEI DP para HDMI](https://shopee.com.br/product/1590082224/58250184593?gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QACpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMaaRlZwa4TmRr35EbRKe45opqqWzquDpxLoPl6a_nP90XlrFndAmj-Eti4LViLnnfxaArnW_92wfHWioVqmNpcGhlcnRleHTEdAAAAAzEdJYIlMyBP-5Pmi-aI8ubtR5HcX38fiWtkN0vaYOYLnESM_VBDtr98r5gwfpsE0-hbf1YQ-V5bGKEQXbvn23nlJ3ZLJr6ijfx9nnHC_vCDwWsV0kh57eImjsIBCgDTFR4ADieeHLvphDhEpgdM8jM&gad_source=1&gad_campaignid=20824904870&gclid=Cj0KCQjwhsrUBhDxARIsAN3AQSeJlDutKoEcqnicEc_ep5yhbQ81NhSkNAjzG2RkGktTB0pcOz1_ISEaAosYEALw_wcB)  
+<img src="media/BENFEI-DP2HDMI.webp" width="300" alt="Adaptador BENFEI">   
+- [BENFEI — Cabo USB C para DisplayPort 1.4 bidirecional](https://www.amazon.com.br/dp/B0DNSNGDSB?ref=ppx_yo2ov_dt_b_fed_asin_title)  
+<img src="media/BENFEI-DP2USB-C.webp" width="300" alt="BENFEI — Cabo USB C para DisplayPort 1.4 bidirecional"> 
+    
+### Adaptador USB para WIFI/Bluetooth
+Nesse caso a "incompatibilidade" se dá por conta de alguns chipsets que não são compatíveis com linux, além disso, existe o comportamento de alguns fabricantes/lojas que entregam o mesmo "modelo" de dispositivo com chipsets diferentes, por isso a melhor forma é procurar no anúncio se é compatível com linux, sendo que a forma mais garantida é procurar no anúncio o modelo do chipset e pesquisar no google a compatibilidade com linux.  
+
+Ex. [Adaptador USB Sem Fio Wifi/Bluetooth 600Mbps](https://s.click.aliexpress.com/e/_mOyWwIX) se seguirmos o link e olharmos a especificação teremos o chipset **RTL8812** e se jogarmos no google **linux RTL8812 kernel 7** a resposta virá dizendo que o driver para o adaptador RTL8812 é nativamente suportado no kernel 7.X - Em distros que usem kernels mais antigos pode ser necessário instalar o driver DKMS específico.
+
+### FAN 120mm
   
 ## Características da instalação
 Como resultado final da instalação teremos um Arch Linux com as seguintes características:  
